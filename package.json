@@ -1,19 +1,43 @@
 {
-  "name": "@leanx/design-system",
+  "name": "@iqbalrahman/design-system",
   "version": "1.0.0",
-  "description": "LeanX Design System - Cross-framework component library",
+  "description": "LeanX Design System - Cross-framework component library built from Next.js + shadcn/ui",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "style": "dist/styles.css",
   "files": [
     "dist",
-    "src"
+    "README.md"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "rollup -c",
+    "build:css": "node build-css.js",
     "dev": "rollup -c -w",
-    "prepublishonly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "design-system",
+    "ui-components",
+    "vue",
+    "react",
+    "css",
+    "shadcn",
+    "tailwind",
+    "components"
+  ],
+  "author": "Iqbal Rahman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iqbalrahmanlean/leanx-design-system.git"
+  },
+  "homepage": "https://github.com/iqbalrahmanlean/leanx-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/iqbalrahmanlean/leanx-design-system/issues"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
@@ -30,5 +54,13 @@
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   }
 }
