@@ -1,0 +1,31 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badge-default {
+  background-color: #000;
+  color: #fff;
+}
+
+.badge-secondary {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.badge-destructive {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.badge-outline {
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+}
