@@ -27,8 +27,10 @@ export default [
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss({
-        extract: 'styles.css',
+        extract: true,
+        extractPath: 'dist/styles.css',
         minimize: true,
+        sourceMap: true,
       }),
     ],
   },
