@@ -1,6 +1,6 @@
 {
   "name": "@iqbalrahman/design-system",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "LeanX Design System - Cross-framework component library built from Next.js + shadcn/ui",
   "type": "module",
   "main": "dist/index.js",

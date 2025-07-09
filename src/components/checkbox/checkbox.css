@@ -1,0 +1,55 @@
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid hsl(var(--border));
+  background-color: transparent;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.2s;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.checkbox:focus-visible {
+  border-color: hsl(var(--ring));
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.5);
+}
+
+.checkbox:checked {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.checkbox-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: currentColor;
+  display: none;
+}
+
+.checkbox:checked .checkbox-icon {
+  display: block;
+}
+
+/* For browsers that support :has() */
+.checkbox:has(input:checked) {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.checkbox:has(input:checked) .checkbox-icon {
+  display: block;
+}
